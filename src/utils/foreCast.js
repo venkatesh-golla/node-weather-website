@@ -1,7 +1,7 @@
 const request=require('postman-request')
 
 const foreCast=(longitude,latitude,callback)=>{
-    const url='http://api.weatherstack.com/current?access_key=cda0ae9d4feb02050c2008cb4b1acdb0&query='+longitude+','+latitude+'units=f'
+    const url='http://api.weatherstack.com/current?access_key=cda0ae9d4feb02050c2008cb4b1acdb0&query='+latitude+','+longitude
     request({url,json:true},(error,{body})=>{
         if(error){
             callback(`Unable to connect to weather api`,undefined)
