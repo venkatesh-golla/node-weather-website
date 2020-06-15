@@ -7,6 +7,8 @@ const { response } = require('express')
 
 const app=express()
 //Define paths for Express config
+const port=process.env.PORT || 3000 // PORT is from heroku if it doesnot have any value then default 3000 will be taken as port
+
 const publicDirectoryPath=path.join(__dirname,'../public')//path.join is used to set the path to a particular file or folder using __dirname as reference mostly
                                                            //__dirname displays the path of current folder we are in 
 const viewsPath=path.join(__dirname,'../templates/views')
@@ -99,6 +101,6 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(3000,()=>{   
+app.listen(port,()=>{   
     console.log('Server is up on port 3000')
 })
