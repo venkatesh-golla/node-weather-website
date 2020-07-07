@@ -1,4 +1,4 @@
-# node-weather-website
+# node-weather-website developed by Venkatesh Golla
 Website showing weather information based on user location. Location is fetched from an API
 
 This is a Website using which you can find the weather either by typing your city name in the textbox or by clicking on the button named location
